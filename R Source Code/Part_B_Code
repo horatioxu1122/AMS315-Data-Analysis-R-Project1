@@ -1,4 +1,4 @@
-wdir <- "C:\\Users\\******"
+wdir <- "C:\\Users\\*******"
 setwd(wdir)
 data <- read.csv('P1B.csv', header = TRUE)
 summary(data)
