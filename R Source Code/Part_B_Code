@@ -1,6 +1,6 @@
-wdir <- "C:\\Users\\horat\\OneDrive\\Dekstop\\School Stuff\\Stony Brook University\\AMS 315\\Project 1"
+wdir <- "C:\\Users\\******"
 setwd(wdir)
-data <- read.csv('P1B_18878.csv', header = TRUE)
+data <- read.csv('P1B.csv', header = TRUE)
 summary(data)
 data_trans <- data.frame(xtrans=data$IV, ytrans=data$DV^(-3/2))
 groups <- cut(data_trans$xtrans,breaks=c(-Inf,seq(min(data_trans$xtrans)+0.3, max(data_trans$xtrans)-0.3,by=0.3),Inf))
