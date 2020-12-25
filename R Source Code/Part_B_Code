@@ -1,0 +1,12 @@
+wdir <- "C:\\Users\\horat\\OneDrive\\Dekstop\\School Stuff\\Stony Brook University\\AMS 315\\Project 1"
+setwd(wdir)
+data <- read.csv('P1B_18878.csv', header = TRUE)
+summary(data)
+data_trans <- data.frame(xtrans=data$IV, ytrans=data$DV^(-3/2))
+groups <- cut(data_trans$xtrans,breaks=c(-Inf,seq(min(data_trans$xtrans)+0.3, max(data_trans$xtrans)-0.3,by=0.3),Inf))
+table(groups)
+x <- ave(data_trans$xtrans, groups)
+data_bin <- data.frame(x=x, y=data_trans$ytrans)
+library(alr3)
+fit_b <- lm(y ~ x, data = data_bin)
+pureErrorAnova(fit_b)
