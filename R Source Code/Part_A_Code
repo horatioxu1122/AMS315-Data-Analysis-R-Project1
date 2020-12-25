@@ -1,7 +1,7 @@
-wdir <- "C:\\Users\\horat\\OneDrive\\Dekstop\\School Stuff\\Stony Brook University\\AMS 315\\Project 1"
+wdir <- "C:\\Users\\******"
 setwd(wdir)
-PartA_IV <- read.csv('P1A_IV_18878.csv', header = FALSE)
-PartA_DV <- read.csv('P1A_DV_18878.csv', header = FALSE)
+PartA_IV <- read.csv('P1A_IV.csv', header = FALSE)
+PartA_DV <- read.csv('P1A_DV.csv', header = FALSE)
 colnames(PartA_IV) <- c("ID","IV")
 colnames(PartA_DV) <- c("ID","DV")
 PartA <- merge(PartA_IV, PartA_DV, by = 'ID')
